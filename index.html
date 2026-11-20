@@ -1,0 +1,151 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Walking Distance · Sep 21 – Nov 10, 2026</title>
+<meta name="description" content="Daily walking distance, 21 September to 10 November 2026.">
+<style>
+:root{color-scheme:light dark}
+.viz{--surface-1:#fcfcfb;--page:#f9f9f7;--text-primary:#0b0b0b;--text-secondary:#52514e;--muted:#898781;
+ --grid:#e1e0d9;--axis:#c3c2b7;--bar-hl:#6da7ec;--bar-other:#2a78d6;--band:#edece7;--border:rgba(11,11,11,.10)}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz{
+ --surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;--muted:#898781;
+ --grid:#2c2c2a;--axis:#383835;--bar-hl:#9ec5f4;--bar-other:#3987e5;--band:#2c2c2a;--border:rgba(255,255,255,.10)}}
+:root[data-theme="dark"] .viz{--surface-1:#1a1a19;--page:#0d0d0d;--text-primary:#fff;--text-secondary:#c3c2b7;--muted:#898781;
+ --grid:#2c2c2a;--axis:#383835;--bar-hl:#9ec5f4;--bar-other:#3987e5;--band:#2c2c2a;--border:rgba(255,255,255,.10)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.viz{background:var(--page);color:var(--text-primary);min-height:100vh;padding:40px 24px 72px}
+.wrap{max-width:1180px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+h1{font-size:clamp(22px,3.4vw,31px);font-weight:650;letter-spacing:-.01em;line-height:1.2}
+.sub{font-size:15px;color:var(--text-secondary);margin-top:8px}
+button{font:inherit;font-size:13px;color:var(--text-secondary);background:var(--surface-1);
+ border:1px solid var(--border);border-radius:100px;padding:7px 15px;cursor:pointer}
+button:hover{color:var(--text-primary)}
+.stats{display:flex;flex-wrap:wrap;gap:40px;margin:26px 0 8px;padding-top:20px;border-top:1px solid var(--grid)}
+.sv{font-size:29px;font-weight:650;line-height:1.1}
+.su{font-size:15px;font-weight:450;color:var(--text-secondary)}
+.sl{font-size:12.5px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;margin-top:5px}
+.legend{display:flex;flex-wrap:wrap;gap:20px;margin:22px 0 4px;font-size:13.5px;color:var(--text-secondary)}
+.legend span{display:flex;align-items:center;gap:8px}
+.sw{width:13px;height:13px;border-radius:3px;display:inline-block}
+.card{position:relative;background:var(--surface-1);border:1px solid var(--border);border-radius:14px;margin-top:10px;overflow-x:auto}
+svg{display:block;width:100%;min-width:760px;height:auto}
+.tick{font-size:13px;fill:var(--muted)}
+.dlabel{font-size:13px;font-weight:650;fill:var(--text-primary)}
+.bandlab{font-size:11.5px;fill:var(--muted);letter-spacing:.04em}
+.hit{cursor:crosshair}
+.hit:hover{fill:color-mix(in srgb,var(--text-primary) 5%,transparent)}
+#tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .09s;background:var(--surface-1);
+ border:1px solid var(--border);border-radius:9px;padding:9px 12px;font-size:13px;line-height:1.45;
+ box-shadow:0 4px 16px rgba(0,0,0,.14);white-space:nowrap;z-index:5}
+#tip b{font-size:15px}
+#tip .m{color:var(--text-secondary)}
+.foot{font-size:12.5px;color:var(--muted);margin-top:16px;max-width:860px;line-height:1.6}
+details{margin-top:30px;border-top:1px solid var(--grid);padding-top:18px}
+summary{cursor:pointer;font-size:14px;color:var(--text-secondary)}
+table{border-collapse:collapse;margin-top:16px;font-size:13.5px;width:100%;max-width:560px}
+th,td{text-align:left;padding:7px 18px 7px 0;border-bottom:1px solid var(--grid)}
+th{color:var(--muted);font-weight:500;font-size:12px;letter-spacing:.05em;text-transform:uppercase}
+.num{font-variant-numeric:tabular-nums}
+</style></head><body><div class="viz"><div class="wrap">
+<header>
+ <div>
+  <h1>Most days are a mile; the long walks are the exception</h1>
+  <p class="sub">Daily walking distance · Sep 21 – Nov 10, 2026 · 37 of 51 days recorded</p>
+ </div>
+ <button id="tt" aria-label="Toggle dark mode">Dark mode</button>
+</header>
+<div class="stats">
+ <div><div class="sv">50.1<span class="su"> mi</span></div><div class="sl">Total distance</div></div>
+ <div><div class="sv">1.35<span class="su"> mi</span></div><div class="sl">Average walk</div></div>
+ <div><div class="sv">37<span class="su"> days</span></div><div class="sl">Days walked</div></div>
+ <div><div class="sv">14<span class="su"> days</span></div><div class="sl">Sick · no data</div></div>
+</div>
+<div class="legend">
+ <span><i class="sw" style="background:var(--bar-hl)"></i>Sep 28 – Nov 1</span>
+ <span><i class="sw" style="background:var(--bar-other)"></i>Other days</span>
+ <span><i class="sw" style="background:var(--band)"></i>Sick · no data</span>
+</div>
+<div class="card">
+ <svg viewBox="0 0 1600 820" role="img" aria-label="Column chart of daily walking distance from September 21 to November 10, 2026.">
+ <text x="72" y="40" text-anchor="end" class="tick">Miles</text><rect x="144.5" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="431.9" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="546.9" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="661.9" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="891.9" y="56" width="84.2" height="660" fill="var(--band)"/><rect x="1006.8" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="1150.6" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="1294.3" y="56" width="26.7" height="660" fill="var(--band)"/><rect x="1380.5" y="56" width="113.0" height="660" fill="var(--band)"/><line x1="86" y1="716" x2="1552" y2="716" stroke="var(--axis)" stroke-width="1.5"/><text x="72" y="721" text-anchor="end" class="tick">0</text><line x1="86" y1="551" x2="1552" y2="551" stroke="var(--grid)" stroke-width="1"/><text x="72" y="556" text-anchor="end" class="tick">1</text><line x1="86" y1="386" x2="1552" y2="386" stroke="var(--grid)" stroke-width="1"/><text x="72" y="391" text-anchor="end" class="tick">2</text><line x1="86" y1="221" x2="1552" y2="221" stroke="var(--grid)" stroke-width="1"/><text x="72" y="226" text-anchor="end" class="tick">3</text><line x1="86" y1="56" x2="1552" y2="56" stroke="var(--grid)" stroke-width="1"/><text x="72" y="61" text-anchor="end" class="tick">4</text><path d="M90.87254901960785 716V553.35Q90.87254901960785 549.35 94.87254901960785 549.35H105.87254901960785Q109.87254901960785 549.35 109.87254901960785 553.35V716Z" fill="var(--bar-other)"/><path d="M119.61764705882354 716V325.65Q119.61764705882354 321.65 123.61764705882354 321.65H134.61764705882354Q138.61764705882354 321.65 138.61764705882354 325.65V716Z" fill="var(--bar-other)"/><path d="M177.10784313725492 716V531.9Q177.10784313725492 527.9 181.10784313725492 527.9H192.10784313725492Q196.10784313725492 527.9 196.10784313725492 531.9V716Z" fill="var(--bar-other)"/><path d="M205.8529411764706 716V578.1Q205.8529411764706 574.1 209.8529411764706 574.1H220.8529411764706Q224.8529411764706 574.1 224.8529411764706 578.1V716Z" fill="var(--bar-other)"/><path d="M234.59803921568627 716V559.95Q234.59803921568627 555.95 238.59803921568627 555.95H249.59803921568627Q253.59803921568627 555.95 253.59803921568627 559.95V716Z" fill="var(--bar-other)"/><path d="M263.343137254902 716V512.1Q263.343137254902 508.1 267.343137254902 508.1H278.343137254902Q282.343137254902 508.1 282.343137254902 512.1V716Z" fill="var(--bar-other)"/><path d="M292.0882352941177 716V459.3Q292.0882352941177 455.3 296.0882352941177 455.3H307.0882352941177Q311.0882352941177 455.3 311.0882352941177 459.3V716Z" fill="var(--bar-hl)"/><path d="M320.83333333333337 716V508.79999999999995Q320.83333333333337 504.79999999999995 324.83333333333337 504.79999999999995H335.83333333333337Q339.83333333333337 504.79999999999995 339.83333333333337 508.79999999999995V716Z" fill="var(--bar-hl)"/><path d="M349.578431372549 716V456Q349.578431372549 452 353.578431372549 452H364.578431372549Q368.578431372549 452 368.578431372549 456V716Z" fill="var(--bar-hl)"/><path d="M378.3235294117647 716V462.59999999999997Q378.3235294117647 458.59999999999997 382.3235294117647 458.59999999999997H393.3235294117647Q397.3235294117647 458.59999999999997 397.3235294117647 462.59999999999997V716Z" fill="var(--bar-hl)"/><path d="M407.0686274509804 716V522Q407.0686274509804 518 411.0686274509804 518H422.0686274509804Q426.0686274509804 518 426.0686274509804 522V716Z" fill="var(--bar-hl)"/><path d="M464.55882352941177 716V531.9Q464.55882352941177 527.9 468.55882352941177 527.9H479.55882352941177Q483.55882352941177 527.9 483.55882352941177 531.9V716Z" fill="var(--bar-hl)"/><path d="M493.30392156862746 716V545.1Q493.30392156862746 541.1 497.30392156862746 541.1H508.3039215686274Q512.3039215686274 541.1 512.3039215686274 545.1V716Z" fill="var(--bar-hl)"/><path d="M522.0490196078432 716V512.1Q522.0490196078432 508.1 526.0490196078432 508.1H537.0490196078432Q541.0490196078432 508.1 541.0490196078432 512.1V716Z" fill="var(--bar-hl)"/><path d="M579.5392156862746 716V421.34999999999997Q579.5392156862746 417.34999999999997 583.5392156862746 417.34999999999997H594.5392156862746Q598.5392156862746 417.34999999999997 598.5392156862746 421.34999999999997V716Z" fill="var(--bar-hl)"/><path d="M608.2843137254902 716V551.7Q608.2843137254902 547.7 612.2843137254902 547.7H623.2843137254902Q627.2843137254902 547.7 627.2843137254902 551.7V716Z" fill="var(--bar-hl)"/><path d="M637.0294117647059 716V579.75Q637.0294117647059 575.75 641.0294117647059 575.75H652.0294117647059Q656.0294117647059 575.75 656.0294117647059 579.75V716Z" fill="var(--bar-hl)"/><path d="M694.5196078431372 716V541.8Q694.5196078431372 537.8 698.5196078431372 537.8H709.5196078431372Q713.5196078431372 537.8 713.5196078431372 541.8V716Z" fill="var(--bar-hl)"/><path d="M723.2647058823529 716V449.40000000000003Q723.2647058823529 445.40000000000003 727.2647058823529 445.40000000000003H738.2647058823529Q742.2647058823529 445.40000000000003 742.2647058823529 449.40000000000003V716Z" fill="var(--bar-hl)"/><path d="M752.0098039215686 716V578.1Q752.0098039215686 574.1 756.0098039215686 574.1H767.0098039215686Q771.0098039215686 574.1 771.0098039215686 578.1V716Z" fill="var(--bar-hl)"/><path d="M780.7549019607843 716V517.05Q780.7549019607843 513.05 784.7549019607843 513.05H795.7549019607843Q799.7549019607843 513.05 799.7549019607843 517.05V716Z" fill="var(--bar-hl)"/><path d="M809.5 716V531.9Q809.5 527.9 813.5 527.9H824.5Q828.5 527.9 828.5 531.9V716Z" fill="var(--bar-hl)"/><path d="M838.2450980392157 716V515.4Q838.2450980392157 511.4 842.2450980392157 511.4H853.2450980392157Q857.2450980392157 511.4 857.2450980392157 515.4V716Z" fill="var(--bar-hl)"/><path d="M866.9901960784314 716V535.2Q866.9901960784314 531.2 870.9901960784314 531.2H881.9901960784314Q885.9901960784314 531.2 885.9901960784314 535.2V716Z" fill="var(--bar-hl)"/><path d="M981.9705882352941 716V434.55Q981.9705882352941 430.55 985.9705882352941 430.55H996.9705882352941Q1000.9705882352941 430.55 1000.9705882352941 434.55V716Z" fill="var(--bar-hl)"/><path d="M1039.4607843137253 716V543.45Q1039.4607843137253 539.45 1043.4607843137253 539.45H1054.4607843137253Q1058.4607843137253 539.45 1058.4607843137253 543.45V716Z" fill="var(--bar-hl)"/><path d="M1068.2058823529412 716V583.05Q1068.2058823529412 579.05 1072.2058823529412 579.05H1083.2058823529412Q1087.2058823529412 579.05 1087.2058823529412 583.05V716Z" fill="var(--bar-hl)"/><path d="M1096.9509803921567 716V522Q1096.9509803921567 518 1100.9509803921567 518H1111.9509803921567Q1115.9509803921567 518 1115.9509803921567 522V716Z" fill="var(--bar-hl)"/><path d="M1125.6960784313724 716V106.19999999999993Q1125.6960784313724 102.19999999999993 1129.6960784313724 102.19999999999993H1140.6960784313724Q1144.6960784313724 102.19999999999993 1144.6960784313724 106.19999999999993V716Z" fill="var(--bar-hl)"/><path d="M1183.1862745098038 716V520.35Q1183.1862745098038 516.35 1187.1862745098038 516.35H1198.1862745098038Q1202.1862745098038 516.35 1202.1862745098038 520.35V716Z" fill="var(--bar-hl)"/><path d="M1211.9313725490194 716V528.6Q1211.9313725490194 524.6 1215.9313725490194 524.6H1226.9313725490194Q1230.9313725490194 524.6 1230.9313725490194 528.6V716Z" fill="var(--bar-hl)"/><path d="M1240.6764705882351 716V427.95Q1240.6764705882351 423.95 1244.6764705882351 423.95H1255.6764705882351Q1259.6764705882351 423.95 1259.6764705882351 427.95V716Z" fill="var(--bar-hl)"/><path d="M1269.4215686274508 716V205.19999999999993Q1269.4215686274508 201.19999999999993 1273.4215686274508 201.19999999999993H1284.4215686274508Q1288.4215686274508 201.19999999999993 1288.4215686274508 205.19999999999993V716Z" fill="var(--bar-hl)"/><path d="M1326.9117647058822 716V566.55Q1326.9117647058822 562.55 1330.9117647058822 562.55H1341.9117647058822Q1345.9117647058822 562.55 1345.9117647058822 566.55V716Z" fill="var(--bar-other)"/><path d="M1355.656862745098 716V541.8Q1355.656862745098 537.8 1359.656862745098 537.8H1370.656862745098Q1374.656862745098 537.8 1374.656862745098 541.8V716Z" fill="var(--bar-other)"/><path d="M1499.3823529411764 716V536.85Q1499.3823529411764 532.85 1503.3823529411764 532.85H1514.3823529411764Q1518.3823529411764 532.85 1518.3823529411764 536.85V716Z" fill="var(--bar-other)"/><path d="M1528.127450980392 716V578.1Q1528.127450980392 574.1 1532.127450980392 574.1H1543.127450980392Q1547.127450980392 574.1 1547.127450980392 578.1V716Z" fill="var(--bar-other)"/><text x="129.11764705882354" y="308.65" text-anchor="middle" class="dlabel">2.39</text><text x="1135.1960784313724" y="89.19999999999993" text-anchor="middle" class="dlabel">3.72</text><text x="1278.9215686274508" y="188.19999999999993" text-anchor="middle" class="dlabel">3.12</text><text x="100.37254901960785" y="744" text-anchor="middle" class="tick">Sep 21</text><text x="301.5882352941177" y="744" text-anchor="middle" class="tick">Sep 28</text><text x="502.80392156862746" y="744" text-anchor="middle" class="tick">Oct 5</text><text x="704.0196078431372" y="744" text-anchor="middle" class="tick">Oct 12</text><text x="905.2352941176471" y="744" text-anchor="middle" class="tick">Oct 19</text><text x="1106.4509803921567" y="744" text-anchor="middle" class="tick">Oct 26</text><text x="1307.6666666666665" y="744" text-anchor="middle" class="tick">Nov 2</text><text x="1508.8823529411764" y="744" text-anchor="middle" class="tick">Nov 9</text><text x="934.0" y="78" text-anchor="middle" class="bandlab">sick · 3 days</text><text x="1437.0" y="78" text-anchor="middle" class="bandlab">sick · 4 days</text><rect class="hit" x="86.0" y="56" width="28.7" height="660" fill="transparent"
+ data-i="0" data-date="Monday, Sep 21" data-v="1.01" data-hl="0"/><rect class="hit" x="114.7" y="56" width="28.7" height="660" fill="transparent"
+ data-i="1" data-date="Tuesday, Sep 22" data-v="2.39" data-hl="0"/><rect class="hit" x="143.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="2" data-date="Wednesday, Sep 23" data-v="" data-hl="0"/><rect class="hit" x="172.2" y="56" width="28.7" height="660" fill="transparent"
+ data-i="3" data-date="Thursday, Sep 24" data-v="1.14" data-hl="0"/><rect class="hit" x="201.0" y="56" width="28.7" height="660" fill="transparent"
+ data-i="4" data-date="Friday, Sep 25" data-v="0.86" data-hl="0"/><rect class="hit" x="229.7" y="56" width="28.7" height="660" fill="transparent"
+ data-i="5" data-date="Saturday, Sep 26" data-v="0.97" data-hl="0"/><rect class="hit" x="258.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="6" data-date="Sunday, Sep 27" data-v="1.26" data-hl="0"/><rect class="hit" x="287.2" y="56" width="28.7" height="660" fill="transparent"
+ data-i="7" data-date="Monday, Sep 28" data-v="1.58" data-hl="1"/><rect class="hit" x="316.0" y="56" width="28.7" height="660" fill="transparent"
+ data-i="8" data-date="Tuesday, Sep 29" data-v="1.28" data-hl="1"/><rect class="hit" x="344.7" y="56" width="28.7" height="660" fill="transparent"
+ data-i="9" data-date="Wednesday, Sep 30" data-v="1.60" data-hl="1"/><rect class="hit" x="373.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="10" data-date="Thursday, Oct 1" data-v="1.56" data-hl="1"/><rect class="hit" x="402.2" y="56" width="28.7" height="660" fill="transparent"
+ data-i="11" data-date="Friday, Oct 2" data-v="1.20" data-hl="1"/><rect class="hit" x="430.9" y="56" width="28.7" height="660" fill="transparent"
+ data-i="12" data-date="Saturday, Oct 3" data-v="" data-hl="1"/><rect class="hit" x="459.7" y="56" width="28.7" height="660" fill="transparent"
+ data-i="13" data-date="Sunday, Oct 4" data-v="1.14" data-hl="1"/><rect class="hit" x="488.4" y="56" width="28.7" height="660" fill="transparent"
+ data-i="14" data-date="Monday, Oct 5" data-v="1.06" data-hl="1"/><rect class="hit" x="517.2" y="56" width="28.7" height="660" fill="transparent"
+ data-i="15" data-date="Tuesday, Oct 6" data-v="1.26" data-hl="1"/><rect class="hit" x="545.9" y="56" width="28.7" height="660" fill="transparent"
+ data-i="16" data-date="Wednesday, Oct 7" data-v="" data-hl="1"/><rect class="hit" x="574.7" y="56" width="28.7" height="660" fill="transparent"
+ data-i="17" data-date="Thursday, Oct 8" data-v="1.81" data-hl="1"/><rect class="hit" x="603.4" y="56" width="28.7" height="660" fill="transparent"
+ data-i="18" data-date="Friday, Oct 9" data-v="1.02" data-hl="1"/><rect class="hit" x="632.2" y="56" width="28.7" height="660" fill="transparent"
+ data-i="19" data-date="Saturday, Oct 10" data-v="0.85" data-hl="1"/><rect class="hit" x="660.9" y="56" width="28.7" height="660" fill="transparent"
+ data-i="20" data-date="Sunday, Oct 11" data-v="" data-hl="1"/><rect class="hit" x="689.6" y="56" width="28.7" height="660" fill="transparent"
+ data-i="21" data-date="Monday, Oct 12" data-v="1.08" data-hl="1"/><rect class="hit" x="718.4" y="56" width="28.7" height="660" fill="transparent"
+ data-i="22" data-date="Tuesday, Oct 13" data-v="1.64" data-hl="1"/><rect class="hit" x="747.1" y="56" width="28.7" height="660" fill="transparent"
+ data-i="23" data-date="Wednesday, Oct 14" data-v="0.86" data-hl="1"/><rect class="hit" x="775.9" y="56" width="28.7" height="660" fill="transparent"
+ data-i="24" data-date="Thursday, Oct 15" data-v="1.23" data-hl="1"/><rect class="hit" x="804.6" y="56" width="28.7" height="660" fill="transparent"
+ data-i="25" data-date="Friday, Oct 16" data-v="1.14" data-hl="1"/><rect class="hit" x="833.4" y="56" width="28.7" height="660" fill="transparent"
+ data-i="26" data-date="Saturday, Oct 17" data-v="1.24" data-hl="1"/><rect class="hit" x="862.1" y="56" width="28.7" height="660" fill="transparent"
+ data-i="27" data-date="Sunday, Oct 18" data-v="1.12" data-hl="1"/><rect class="hit" x="890.9" y="56" width="28.7" height="660" fill="transparent"
+ data-i="28" data-date="Monday, Oct 19" data-v="" data-hl="1"/><rect class="hit" x="919.6" y="56" width="28.7" height="660" fill="transparent"
+ data-i="29" data-date="Tuesday, Oct 20" data-v="" data-hl="1"/><rect class="hit" x="948.4" y="56" width="28.7" height="660" fill="transparent"
+ data-i="30" data-date="Wednesday, Oct 21" data-v="" data-hl="1"/><rect class="hit" x="977.1" y="56" width="28.7" height="660" fill="transparent"
+ data-i="31" data-date="Thursday, Oct 22" data-v="1.73" data-hl="1"/><rect class="hit" x="1005.8" y="56" width="28.7" height="660" fill="transparent"
+ data-i="32" data-date="Friday, Oct 23" data-v="" data-hl="1"/><rect class="hit" x="1034.6" y="56" width="28.7" height="660" fill="transparent"
+ data-i="33" data-date="Saturday, Oct 24" data-v="1.07" data-hl="1"/><rect class="hit" x="1063.3" y="56" width="28.7" height="660" fill="transparent"
+ data-i="34" data-date="Sunday, Oct 25" data-v="0.83" data-hl="1"/><rect class="hit" x="1092.1" y="56" width="28.7" height="660" fill="transparent"
+ data-i="35" data-date="Monday, Oct 26" data-v="1.20" data-hl="1"/><rect class="hit" x="1120.8" y="56" width="28.7" height="660" fill="transparent"
+ data-i="36" data-date="Tuesday, Oct 27" data-v="3.72" data-hl="1"/><rect class="hit" x="1149.6" y="56" width="28.7" height="660" fill="transparent"
+ data-i="37" data-date="Wednesday, Oct 28" data-v="" data-hl="1"/><rect class="hit" x="1178.3" y="56" width="28.7" height="660" fill="transparent"
+ data-i="38" data-date="Thursday, Oct 29" data-v="1.21" data-hl="1"/><rect class="hit" x="1207.1" y="56" width="28.7" height="660" fill="transparent"
+ data-i="39" data-date="Friday, Oct 30" data-v="1.16" data-hl="1"/><rect class="hit" x="1235.8" y="56" width="28.7" height="660" fill="transparent"
+ data-i="40" data-date="Saturday, Oct 31" data-v="1.77" data-hl="1"/><rect class="hit" x="1264.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="41" data-date="Sunday, Nov 1" data-v="3.12" data-hl="1"/><rect class="hit" x="1293.3" y="56" width="28.7" height="660" fill="transparent"
+ data-i="42" data-date="Monday, Nov 2" data-v="" data-hl="0"/><rect class="hit" x="1322.0" y="56" width="28.7" height="660" fill="transparent"
+ data-i="43" data-date="Tuesday, Nov 3" data-v="0.93" data-hl="0"/><rect class="hit" x="1350.8" y="56" width="28.7" height="660" fill="transparent"
+ data-i="44" data-date="Wednesday, Nov 4" data-v="1.08" data-hl="0"/><rect class="hit" x="1379.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="45" data-date="Thursday, Nov 5" data-v="" data-hl="0"/><rect class="hit" x="1408.3" y="56" width="28.7" height="660" fill="transparent"
+ data-i="46" data-date="Friday, Nov 6" data-v="" data-hl="0"/><rect class="hit" x="1437.0" y="56" width="28.7" height="660" fill="transparent"
+ data-i="47" data-date="Saturday, Nov 7" data-v="" data-hl="0"/><rect class="hit" x="1465.8" y="56" width="28.7" height="660" fill="transparent"
+ data-i="48" data-date="Sunday, Nov 8" data-v="" data-hl="0"/><rect class="hit" x="1494.5" y="56" width="28.7" height="660" fill="transparent"
+ data-i="49" data-date="Monday, Nov 9" data-v="1.11" data-hl="0"/><rect class="hit" x="1523.3" y="56" width="28.7" height="660" fill="transparent"
+ data-i="50" data-date="Tuesday, Nov 10" data-v="0.86" data-hl="0"/></svg>
+ <div id="tip"></div>
+</div>
+<p class="foot">Gaps are days spent sick, when no walking data was recorded — they are left empty rather than counted as zero, so they do not drag the average down. Hover any day for its exact distance.</p>
+<details><summary>View the data as a table</summary>
+<table><thead><tr><th>Date</th><th>Day</th><th>Miles</th><th>Period</th></tr></thead><tbody><tr><td>Sep 21</td><td>Mon</td><td class="num">1.01</td><td>Other days</td></tr><tr><td>Sep 22</td><td>Tue</td><td class="num">2.39</td><td>Other days</td></tr><tr><td>Sep 23</td><td>Wed</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Sep 24</td><td>Thu</td><td class="num">1.14</td><td>Other days</td></tr><tr><td>Sep 25</td><td>Fri</td><td class="num">0.86</td><td>Other days</td></tr><tr><td>Sep 26</td><td>Sat</td><td class="num">0.97</td><td>Other days</td></tr><tr><td>Sep 27</td><td>Sun</td><td class="num">1.26</td><td>Other days</td></tr><tr><td>Sep 28</td><td>Mon</td><td class="num">1.58</td><td>Sep 28 – Nov 1</td></tr><tr><td>Sep 29</td><td>Tue</td><td class="num">1.28</td><td>Sep 28 – Nov 1</td></tr><tr><td>Sep 30</td><td>Wed</td><td class="num">1.60</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 1</td><td>Thu</td><td class="num">1.56</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 2</td><td>Fri</td><td class="num">1.20</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 3</td><td>Sat</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 4</td><td>Sun</td><td class="num">1.14</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 5</td><td>Mon</td><td class="num">1.06</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 6</td><td>Tue</td><td class="num">1.26</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 7</td><td>Wed</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 8</td><td>Thu</td><td class="num">1.81</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 9</td><td>Fri</td><td class="num">1.02</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 10</td><td>Sat</td><td class="num">0.85</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 11</td><td>Sun</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 12</td><td>Mon</td><td class="num">1.08</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 13</td><td>Tue</td><td class="num">1.64</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 14</td><td>Wed</td><td class="num">0.86</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 15</td><td>Thu</td><td class="num">1.23</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 16</td><td>Fri</td><td class="num">1.14</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 17</td><td>Sat</td><td class="num">1.24</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 18</td><td>Sun</td><td class="num">1.12</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 19</td><td>Mon</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 20</td><td>Tue</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 21</td><td>Wed</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 22</td><td>Thu</td><td class="num">1.73</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 23</td><td>Fri</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 24</td><td>Sat</td><td class="num">1.07</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 25</td><td>Sun</td><td class="num">0.83</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 26</td><td>Mon</td><td class="num">1.20</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 27</td><td>Tue</td><td class="num">3.72</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 28</td><td>Wed</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Oct 29</td><td>Thu</td><td class="num">1.21</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 30</td><td>Fri</td><td class="num">1.16</td><td>Sep 28 – Nov 1</td></tr><tr><td>Oct 31</td><td>Sat</td><td class="num">1.77</td><td>Sep 28 – Nov 1</td></tr><tr><td>Nov 1</td><td>Sun</td><td class="num">3.12</td><td>Sep 28 – Nov 1</td></tr><tr><td>Nov 2</td><td>Mon</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Nov 3</td><td>Tue</td><td class="num">0.93</td><td>Other days</td></tr><tr><td>Nov 4</td><td>Wed</td><td class="num">1.08</td><td>Other days</td></tr><tr><td>Nov 5</td><td>Thu</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Nov 6</td><td>Fri</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Nov 7</td><td>Sat</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Nov 8</td><td>Sun</td><td class="num">—</td><td>Sick · no data</td></tr><tr><td>Nov 9</td><td>Mon</td><td class="num">1.11</td><td>Other days</td></tr><tr><td>Nov 10</td><td>Tue</td><td class="num">0.86</td><td>Other days</td></tr></tbody></table>
+</details>
+</div></div>
+<script>
+const tip=document.getElementById('tip'),card=document.querySelector('.card');
+document.querySelectorAll('.hit').forEach(h=>{
+ h.addEventListener('mousemove',e=>{
+  const v=h.dataset.v, hl=h.dataset.hl==='1';
+  tip.innerHTML='<b>'+(v?v+' mi':'No data')+'</b><br><span class="m">'+h.dataset.date+'</span>'+
+   (v?'<br><span class="m">'+(hl?'Sep 28 – Nov 1':'Other days')+'</span>':'<br><span class="m">Sick</span>');
+  const r=card.getBoundingClientRect();
+  let L=e.clientX-r.left+14, T=e.clientY-r.top+14;
+  tip.style.opacity=1;
+  if(L+tip.offsetWidth>r.width-8) L=e.clientX-r.left-tip.offsetWidth-14;
+  tip.style.left=L+'px'; tip.style.top=T+'px';
+ });
+ h.addEventListener('mouseleave',()=>tip.style.opacity=0);
+});
+const b=document.getElementById('tt'), root=document.documentElement;
+const setL=()=>{const d=root.dataset.theme==='dark'||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);
+ b.textContent=d?'Light mode':'Dark mode';};
+b.onclick=()=>{const d=root.dataset.theme==='dark'||(!root.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);
+ root.dataset.theme=d?'light':'dark'; setL();};
+setL();
+</script></body></html>
